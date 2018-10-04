@@ -4,7 +4,9 @@ from PIL import ImageGrab
 import os
 from unipath import Path
 
-os.chdir("J:\Sauvegarde")
+repertoire = "D:\OurDocuments\Alexandre\Documents\Programme\Test"
+
+os.chdir(repertoire)
 
 l = time.localtime()
 year = l.tm_year
@@ -19,14 +21,11 @@ else:
     os.mkdir(jour)
     print("Dossier créé")
 
-dossier = 'J:/Sauvegarde/' + str(year) + '-' + str(month) + '-' + str(monday)
+dossier = repertoire + '\\' + jour
 os.path.normpath(dossier)
 os.chdir(dossier)
 
-print(os.getcwd())
 
-
-x = 1
 while True:
     image = PIL.ImageGrab.grab()
     t = time.localtime()
@@ -39,6 +38,6 @@ while True:
 
     image.save(str(year) + '-' + str(month) + '-' + str(monday) + '-' + str(hour) + '_' + str(minute) + '-' + str(
         second) + '.png', 'png')
-    x = x + 1
+    
     print("Les captures d'écran sont lancées")
     time.sleep(30)
