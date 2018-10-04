@@ -4,7 +4,7 @@ from PIL import ImageGrab
 import os
 from unipath import Path
 
-repertoire = "D:\OurDocuments\Alexandre\Documents\Programme\Test"
+repertoire = "<Votre repertoire>"
 
 os.chdir(repertoire)
 
