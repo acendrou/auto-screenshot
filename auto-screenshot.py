@@ -1,43 +1,38 @@
 import time
-import PIL
-from PIL import ImageGrab
 import os
-from unipath import Path
+from mss import mss
 
-repertoire = "<Votre repertoire>"
+repertoireGeneral = "./capture-ecran"
 
-os.chdir(repertoire)
-
-l = time.localtime()
-year = l.tm_year
-month = l.tm_mon
-monday = l.tm_mday
-
-jour = str(year)+'-'+str(month)+'-'+str(monday)
-
-if Path.exists(jour):
-    print("Dossier déjà existant")
+if os.path.exists(repertoireGeneral):
+    print("Ok le dossier existe")
 else:
-    os.mkdir(jour)
-    print("Dossier créé")
+    print("Création du dossier")
+    os.mkdir("capture-ecran")
 
-dossier = repertoire + '\\' + jour
-os.path.normpath(dossier)
-os.chdir(dossier)
-
+os.chdir(repertoireGeneral)
+cheminRepertoire = os.getcwd()
 
 while True:
-    image = PIL.ImageGrab.grab()
-    t = time.localtime()
-    year = t.tm_year
-    month = t.tm_mon
-    monday = t.tm_mday
-    hour = t.tm_hour
-    minute = t.tm_min
-    second = t.tm_sec
 
-    image.save(str(year) + '-' + str(month) + '-' + str(monday) + '-' + str(hour) + '_' + str(minute) + '-' + str(
-        second) + '.png', 'png')
-    
-    print("Les captures d'écran sont lancées")
+    # Récupération de la date du jour (année, mois et numéro du jour)
+    dateJour = time.localtime()
+    nomJour = str(dateJour.tm_year) + '-' + str(dateJour.tm_mon) + '-' + str(dateJour.tm_mday)
+
+    nomJourComplet =  os.path.join(cheminRepertoire,nomJour)
+
+    if os.path.exists(nomJourComplet):
+        print("Dossier du jour déjà existant")
+    else:
+        os.mkdir(nomJourComplet)
+        print("Dossier du jour créé")
+
+    os.chdir(nomJourComplet)
+
+    sct = mss()
+
+    datePhoto = time.localtime()
+    nom = str(datePhoto.tm_year) + '-' + str(datePhoto.tm_mon) + '-' + str(datePhoto.tm_mday) + '-' + str(datePhoto.tm_hour) + '_' + str(datePhoto.tm_min) + '-' + str(datePhoto.tm_sec) + '.png'
+
+    sct.shot(output=nom)
     time.sleep(30)
