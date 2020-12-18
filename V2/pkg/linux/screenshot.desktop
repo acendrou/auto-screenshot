@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=AutoScreenshot
+GenericName=A part of Regismne
+Comment=Some description about your script
+Exec=/home/alex/Desktop/screenshot.sh
+Terminal=false
+Type=Application
+X-GNOME-Autostart-enabled=true
