@@ -10,3 +10,12 @@ The images are saved in a folder that is named after the current date and the fi
 | multiple monitor support           | :x:                | :heavy_check_mark: | :heavy_check_mark: |
 | ability to be halted and restarted | :x:                | :x:                | :heavy_check_mark: |
 | configuration made outside .py     | :x:                | :x:                | :heavy_check_mark: |
+
+## Support matrix
+Tested on :
+
+| platform           | V1                 | V2                 | V3                 |
+|--------------------| -------------------|--------------------|--------------------|
+| Windows 7          | :heavy_check_mark: | :x:                | :x:                |
+| Windows 10         | :x:                | :heavy_check_mark: | :heavy_check_mark: |
+| Linux UBUNTU 20.04 | :x:                | :heavy_check_mark: | :x:                |
