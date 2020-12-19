@@ -19,3 +19,7 @@ Tested on :
 | Windows 7          | :heavy_check_mark: | :x:                | :x:                |
 | Windows 10         | :x:                | :heavy_check_mark: | :heavy_check_mark: |
 | Linux UBUNTU 20.04 | :x:                | :heavy_check_mark: | :x:                |
+
+## Installation
+
+This project is written in Python 3. Libraries dependencies can be obtained from Pypi and they are listed in file requirements.txt in each app folder.
