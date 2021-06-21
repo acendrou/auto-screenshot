@@ -21,7 +21,7 @@ Tested on :
 | Windows 10         | :x:                | :heavy_check_mark: | :heavy_check_mark: |  :heavy_check_mark: |
 | Linux UBUNTU 20.04 | :x:                | :heavy_check_mark: | :x:                |  :heavy_minus_sign: |
 
-The V4 is only supported by Windows due to notifications dependencies.
+The V4 is only supported on Windows due to notifications dependencies.
 
 ## Installation
 
