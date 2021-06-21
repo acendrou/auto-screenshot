@@ -23,3 +23,11 @@ Tested on :
 ## Installation
 
 This project is written in Python 3. Libraries dependencies can be obtained from Pypi and they are listed in file requirements.txt in each app folder.
+
+### To start automatically the script at boot time
+Two options for Windows : 
+ - use the batch script and place it in the startup folder (see [here](https://support.microsoft.com/en-us/windows/add-an-app-to-run-automatically-at-startup-in-windows-10-150da165-dcd9-7230-517b-cf3c295d89dd))
+ - add a task in the task scheduler of Windows 
+
+For linux and Gnome : 
+- use the desktop entry (see [here](https://developer.gnome.org/desktop-entry-spec/) and [here](https://developer.gnome.org/integration-guide/stable/desktop-files.html.en))
